@@ -6,6 +6,6 @@ export default DS.Transform.extend({
 		return Ember.String.htmlSafe(serialized);
 	},
 	serialize(deserialized) {
-		return deserialized.toString();
+		return deserialized.string;
 	}
 });

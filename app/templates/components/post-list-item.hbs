@@ -1,12 +1,22 @@
 <div class="grid-content thumbnail">
     {{#link-to 'post' model class='post-thumbnail'}}
-        <img width="400" height="225"
-             src="http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title-400x225.jpg"
-             class="attachment-thumbnail size-thumbnail wp-post-image" alt="A Second Glance: ‘The Wrong Guy’ (1997)"
-             srcset="http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title-400x225.jpg 400w, http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title.jpg 1280w"
-             sizes="(max-width: 400px) 100vw, 400px" title="" style="">
+        {{#with media.mediaDetails.sizes as |sizes|}}
+            <img width="400" height="225"
+                 src="{{sizes.thumbnail.source_url}}"
+                 class="attachment-thumbnail size-thumbnail wp-post-image"
+                 alt="{{model.title}}"
+                 srcset="{{sizes.thumbnail.source_url}} 400w, {{sizes.full.source_url}} 1280w"
+                 sizes="(max-width: 400px) 100vw, 400px">
+        {{/with}}
     {{/link-to}}
-    <span class="category cat-movies">Movies</span>
+    {{!--
+        TODO:
+        This should display category with parent=3 (vertical) but I couldn't send proper filter to API
+        /wp-json/wp/v2/categories?filter[post]=17494&filter[parent]=3 "should work" but didn't
+     --}}
+    <span class="category cat-{{model.categories.firstObject.slug}}">
+        {{model.categories.firstObject.name}}
+    </span>
 </div>
 <div class="grid-content details">
     <h3 class="entry-title">
