@@ -1,0 +1,75 @@
+<div class="top-nav">
+    <div class="top-nav-wrapper grid-container">
+        <div class="hamburger show-for-small hide-for-large">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        {{#link-to 'index' class='wordmark wordmark-fandom-logo-link-desktop'}}
+            <img class="logo-fandom-tagline"
+                 src="http://sandbox2.fandom.wikia.com/wp-content/themes/upstream/dist/svg/logo-fandom-tagline.svg">
+        {{/link-to}}
+        {{#link-to 'index' class='wordmark'}}
+            <img class="logo-fandom"
+                 src="http://sandbox2.fandom.wikia.com/wp-content/themes/upstream/dist/svg/logo-fandom.svg">
+        {{/link-to}}
+        <ul class="nav-links sub-nav hide-for-mobile">
+            <li class="user-state-mobile clearfix">
+                <div class="unauthenticated">
+                    <img class="icon-sign-in-gray"
+                         src="http://sandbox2.fandom.wikia.com/wp-content/themes/upstream/dist/svg/icon-sign-in-white.svg">
+                    HARDCODED :(
+                </div>
+            </li>
+            <li class="games nav-links-item">{{link-to 'Games' 'category' 'games'}}</li>
+            <li class="movies nav-links-item">{{link-to 'Movies' 'category' 'movies'}}</li>
+            <li class="movies nav-links-item">{{link-to 'TV' 'category' 'tv'}}</li>
+            {{! TODO hardcoded }}
+            <li class="explore nav-links-item hide-for-mobile">
+                <a href="/explore">
+                    Explore Wikia
+                </a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="http://www.wikia.com/WAM">Trending Communities</a></li>
+                        <li><a href="http://community.wikia.com/wiki/Community_Central">Community Central</a></li>
+                    </ul>
+                    <a class="btn" href="http://www.wikia.com/Special:CreateNewWiki">Start a Wikia</a>
+                </div>
+            </li>
+            <li class="explore-mobile nav-links-item">
+                <a href="/explore">
+                    <svg class="icon icon-arrow-white">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-white"></use>
+                    </svg>
+                    Explore Wikia
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-drawer sub-nav hide-for-mobile">
+            <ul>
+                <li class="cta-link back-link">
+                    <a href="">
+                        <svg class="icon icon-arrow-white">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-white"></use>
+                        </svg>
+                        Back
+                    </a>
+                </li>
+                <li><a class="generic nav-links-item" href="/explore">Top Communities</a></li>
+                <li><a class="generic nav-links-item" href="http://www.wikia.com/WAM">Trending Communities</a></li>
+                <li><a class="generic nav-links-item" href="http://community.wikia.com/wiki/Community_Central">Community
+                    Central</a></li>
+            </ul>
+        </div>
+        <div class="user-state hide-for-mobile">
+            <div class="unauthenticated">
+                <img class="icon-sign-in-gray"
+                     src="http://sandbox2.fandom.wikia.com/wp-content/themes/upstream/dist/svg/icon-sign-in-gray.svg">
+                <a href="http://www.wikia.com/signin">HARDCODED :(</a>
+            </div>
+        </div>
+    </div>
+</div>
