@@ -4,12 +4,13 @@ const {$, Component, computed, isEmpty} = Ember;
 
 export default Component.extend({
 	tagName: 'section',
-	classNames: ['featured-header'],
+	classNameBindings: ['isFeatured:featured-header'],
 	attributeBindings: ['style'],
 
 	store: Ember.inject.service(),
 
 	// TODO wow this is super hacky and no good for fastboot
+	// need to learn how to work with async properties
 	init() {
 		this._super(arguments);
 
@@ -19,6 +20,7 @@ export default Component.extend({
 					const url = media.get('mediaDetails.sizes.full.source_url');
 
 					this.set('style', `background-image: url(${url});`);
+					this.set('isFeatured', true);
 					$('.article-wrapper').addClass('featured');
 				});
 			}
