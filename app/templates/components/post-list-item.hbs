@@ -1,0 +1,19 @@
+<div class="grid-content thumbnail">
+    {{#link-to 'post' model class='post-thumbnail'}}
+        <img width="400" height="225"
+             src="http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title-400x225.jpg"
+             class="attachment-thumbnail size-thumbnail wp-post-image" alt="A Second Glance: ‘The Wrong Guy’ (1997)"
+             srcset="http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title-400x225.jpg 400w, http://sandbox2.fandom.wikia.com/wp-content/uploads/2016/06/Wrong-Guy-Title.jpg 1280w"
+             sizes="(max-width: 400px) 100vw, 400px" title="" style="">
+    {{/link-to}}
+    <span class="category cat-movies">Movies</span>
+</div>
+<div class="grid-content details">
+    <h3 class="entry-title">
+        {{link-to model.title 'post' model rel='bookmark'}}
+    </h3>
+    <span class="attribution">Fandom</span>
+    <p class="excerpt">
+        {{link-to model.excerpt 'post' model rel='bookmark'}}
+    </p>
+</div>
