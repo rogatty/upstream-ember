@@ -11,11 +11,6 @@ Router.map(function () {
 		path: '/'
 	});
 
-	// e.g. /about
-	this.route('page', {
-		path: ':slug'
-	});
-
 	this.route('posts', {
 		path: 'articles'
 	});
@@ -23,6 +18,10 @@ Router.map(function () {
 	this.route('post', {
 		path: 'articles/:slug'
 	});
+
+	this.route('category', {
+		path: ':slug'
+	})
 });
 
 export default Router;

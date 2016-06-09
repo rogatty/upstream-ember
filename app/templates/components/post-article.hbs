@@ -1,7 +1,9 @@
 <ul class="categories">
-    <li class="cat-movies">
-        <a href="http://sandbox2.fandom.wikia.com/movies">Movies</a>
-    </li>
+    {{#with model.categories.firstObject as |category|}}
+        <li class="cat-{{category.slug}}">
+            {{link-to category.name 'category' category}}
+        </li>
+    {{/with}}
 </ul>
 
 <header class="entry-header">
@@ -9,14 +11,13 @@
 </header>
 
 <div class="entry-meta clearfix">
-    <img src="http://1.gravatar.com/avatar/d86eda13068dce43fe9833e795941251?s=40&amp;d=mm&amp;r=g"
-         width="40" height="40" alt=""
+    {{! TODO WP template uses 40px which isn't in API response }}
+    <img src="{{get model.author.avatarUrls '96'}}" width="40" height="40" alt=""
          class="avatar avatar-40 wp-user-avatar wp-user-avatar-40 photo avatar-default">
 
     <span class="byline">
         <span class="author vcard">
-            <span>By: </span>
-            Hardcoded
+            <span>By: </span>{{model.author.name}}
         </span>
     </span>
 
@@ -73,9 +74,9 @@
     </div>
 </div>
 <div class="author-bio">
-    <img src="http://1.gravatar.com/avatar/d86eda13068dce43fe9833e795941251?s=60&amp;d=mm&amp;r=g"
+    <img src="{{get model.author.avatarUrls '96'}}"
          width="60" height="60" alt=""
          class="avatar avatar-60 wp-user-avatar wp-user-avatar-60 photo avatar-default">
-    <div class="author-name">Hardcoded</div>
-    <p class="about">TODO: about the author</p>
+    <div class="author-name">{{model.author.name}}</div>
+    <p class="about">{{model.author.description}}</p>
 </div>
