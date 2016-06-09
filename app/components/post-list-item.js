@@ -3,8 +3,6 @@ import Ember from 'ember';
 const {Component, computed} = Ember;
 
 export default Component.extend({
-	// TODO should be div
-	tagName: 'li',
 	classNames: ['post', 'grid-block', 'small-12'],
 
 	store: Ember.inject.service(),
