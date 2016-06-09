@@ -1,8 +1,81 @@
-<h1>{{{model.title}}}</h1>
+<ul class="categories">
+    <li class="cat-movies">
+        <a href="http://sandbox2.fandom.wikia.com/movies">Movies</a>
+    </li>
+</ul>
 
-<p>
-    <time>date: {{model.date}}</time>
-    <span>author id: {{model.author}}</span>
-</p>
+<header class="entry-header">
+    <h1 class="entry-title">{{model.title}}</h1>
+</header>
 
-{{{model.content}}}
+<div class="entry-meta clearfix">
+    <img src="http://1.gravatar.com/avatar/d86eda13068dce43fe9833e795941251?s=40&amp;d=mm&amp;r=g"
+         width="40" height="40" alt=""
+         class="avatar avatar-40 wp-user-avatar wp-user-avatar-40 photo avatar-default">
+
+    <span class="byline">
+        <span class="author vcard">
+            <span>By: </span>
+            Hardcoded
+        </span>
+    </span>
+
+    <span class="posted-on">
+        <time class="entry-date published updated" datetime="2016-06-08T04:18:14+00:00">
+            June 8, 2016
+        </time>
+    </span>
+
+    <div class="share-wrapper">
+        <a class="fb-share-btn">
+            <svg class="icon facebook-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon-default"></use>
+            </svg>
+            <span>Share</span></a>
+        <a class="tweet-btn" text=""
+           href="https://twitter.com/intent/tweet?text=&amp;url=http%3A%2F%2Fsandbox2.fandom.wikia.com%2Farticles%2Fa-second-glance-wrong-guy-1997&amp;hashtags=fandom&amp;via=getfandom">
+            <svg class="icon twitter-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon-default"></use>
+            </svg>
+            <span>Tweet</span></a>
+        <a class="reddit-btn" target="_blank"
+           href="//www.reddit.com/submit?url=http%3A%2F%2Fsandbox2.fandom.wikia.com%2Farticles%2Fa-second-glance-wrong-guy-1997">
+            <svg class="icon reddit-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reddit-icon-default"></use>
+            </svg>
+            <span>Share</span></a>
+    </div>
+</div>
+
+<div class="entry-content">{{model.content}}</div>
+
+<div class="article-share">
+    <hr>
+    <div class="text">People are sharing and discussing this article – join them!</div>
+    <div class="share-wrapper">
+        <a class="fb-share-btn" data-is="trackable" riot-tag="trackable">
+            <svg class="icon facebook-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon-default"></use>
+            </svg>
+            <span>Share</span></a>
+        <a class="tweet-btn" text="" data-is="trackable" riot-tag="trackable"
+           href="https://twitter.com/intent/tweet?text=&amp;url=http%3A%2F%2Fsandbox2.fandom.wikia.com%2Farticles%2Fa-second-glance-wrong-guy-1997&amp;hashtags=fandom&amp;via=getfandom">
+            <svg class="icon twitter-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon-default"></use>
+            </svg>
+            <span>Tweet</span></a>
+        <a class="reddit-btn" target="_blank" data-is="trackable" riot-tag="trackable"
+           href="//www.reddit.com/submit?url=http%3A%2F%2Fsandbox2.fandom.wikia.com%2Farticles%2Fa-second-glance-wrong-guy-1997">
+            <svg class="icon reddit-icon-default">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reddit-icon-default"></use>
+            </svg>
+            <span>Share</span></a>
+    </div>
+</div>
+<div class="author-bio">
+    <img src="http://1.gravatar.com/avatar/d86eda13068dce43fe9833e795941251?s=60&amp;d=mm&amp;r=g"
+         width="60" height="60" alt=""
+         class="avatar avatar-60 wp-user-avatar wp-user-avatar-60 photo avatar-default">
+    <div class="author-name">Hardcoded</div>
+    <p class="about">TODO: about the author</p>
+</div>

@@ -7,5 +7,7 @@ export default Ember.Route.extend({
 				name: params.slug
 			}
 		}).then(models => models.get('firstObject'));
-	}
+	},
+
+	classNames: ['single', 'single-post', 'single-format-standard']
 });
