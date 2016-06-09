@@ -5,5 +5,7 @@ export default Ember.Route.extend({
 		return this.store.query('post', {
 			per_page: 15
 		});
-	}
+	},
+
+	classNames: ['page', 'page-articles']
 });

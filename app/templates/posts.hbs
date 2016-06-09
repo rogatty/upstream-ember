@@ -1,6 +1,42 @@
-<h2>Articles</h2>
-<ul>
-    {{#each model as |post|}}
-        {{post-list-item model=post}}
-    {{/each}}
-</ul>
+<section class="all-stories grid-container grid-block main-wrap ">
+    <div class="grid-block wrap list">
+        <header class="grid-content">
+            <h1>All Top Stories</h1>
+            <ul class="channels clearfix">
+                <li class="active">
+                    <a href="http://sandbox2.fandom.wikia.com/articles">All</a>
+                </li>
+                <li>
+                    <a href="http://sandbox2.fandom.wikia.com/articles?channel=games">Games</a>
+                </li>
+                <li>
+                    <a href="http://sandbox2.fandom.wikia.com/articles?channel=movies">Movies</a>
+                </li>
+                <li>
+                    <a href="http://sandbox2.fandom.wikia.com/articles?channel=tv">TV</a>
+                </li>
+            </ul>
+        </header>
+        <div class="grid-block wrap">
+            <div class="grid-block wrap posts post-list">
+                {{#each model as |post|}}
+                    {{post-list-item model=post}}
+                {{/each}}
+            </div>
+            <div class="pagination">
+                <span class="previous inactive">&lt;</span>
+
+                <a href="http://sandbox2.fandom.wikia.com/articles/1" class="page active">1</a>
+                <a href="http://sandbox2.fandom.wikia.com/articles/2" class="page">2</a>
+                <a href="http://sandbox2.fandom.wikia.com/articles/3" class="page">3</a>
+                <a href="http://sandbox2.fandom.wikia.com/articles/4" class="page">4</a>
+                <a href="http://sandbox2.fandom.wikia.com/articles/5" class="page">5</a>
+                <span>…</span>
+                <a href="http://sandbox2.fandom.wikia.com/articles/61" class="page">61</a>
+
+                <a href="http://sandbox2.fandom.wikia.com/articles/2" class="page next">&gt;</a>
+            </div>
+        </div>
+    </div>
+    <div class="rail"></div>
+</section>
