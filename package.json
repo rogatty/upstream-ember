@@ -11,7 +11,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "fb": "ember fastboot --serve-assets --port 4200"
+    "fb": "ember fastboot --serve-assets --port 4200",
+    "fb-cache": "ember b -prod && PORT=4200 node server"
   },
   "repository": "",
   "engines": {
