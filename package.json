@@ -10,11 +10,12 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember test",
+    "fb": "ember fastboot --serve-assets --port 4200"
   },
   "repository": "",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 6.0.0"
   },
   "author": "",
   "license": "MIT",
@@ -26,6 +27,7 @@
     "ember-cli-app-version": "1.0.0",
     "ember-cli-babel": "5.1.6",
     "ember-cli-dependency-checker": "1.2.0",
+    "ember-cli-fastboot": "rogatty/ember-cli-fastboot#6c5eb4f9addd9d5bc9044e8faa11bdbdbe158c1f",
     "ember-cli-htmlbars": "1.0.3",
     "ember-cli-htmlbars-inline-precompile": "0.3.1",
     "ember-cli-inject-live-reload": "1.4.0",
@@ -40,6 +42,8 @@
     "ember-load-initializers": "0.5.1",
     "ember-resolver": "2.0.3",
     "ember-wordpress": "0.1.1",
+    "fastboot-app-server": "rogatty/fastboot-app-server#0d52898d153d085753816652831a09056934497b",
+    "fastboot-redis-cache": "0.1.0",
     "loader.js": "4.0.1"
   }
 }

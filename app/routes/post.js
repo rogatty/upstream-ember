@@ -6,7 +6,9 @@ export default Ember.Route.extend({
 			filter: {
 				name: params.slug
 			}
-		}).then(models => models.get('firstObject'));
+		}).then((models) => {
+			return models.get('firstObject');
+		});
 	},
 
 	classNames: ['single', 'single-post', 'single-format-standard']
