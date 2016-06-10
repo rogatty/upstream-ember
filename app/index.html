@@ -8,17 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
-
-    <link rel="stylesheet" href="assets/upstream-ember.css">
-
+    {{content-for "css"}}
     {{content-for "head-footer"}}
 </head>
 <body>
 {{content-for "svg"}}
 {{content-for "body"}}
 
-<script src="assets/vendor.js"></script>
-<script src="assets/upstream-ember.js"></script>
+<script src="assets/vendor.js" integrity=""></script>
+<script src="assets/upstream-ember.js" integrity=""></script>
 
 {{content-for "body-footer"}}
 </body>
