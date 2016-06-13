@@ -18,7 +18,7 @@ module.exports = function (environment) {
 			// when it is created
 		},
 
-		wordpressHost: 'http://sandbox2.fandom.wikia.com'
+		wordpressHost: 'http://fandom.wikia.com'
 	};
 
 	if (environment === 'development') {
