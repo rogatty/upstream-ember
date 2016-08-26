@@ -1,53 +1,21 @@
-# Upstream-ember
+## Requirements
+* Node.js >= 6
+* Redis if you want to use fastboot caching
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Install dependencies
+```
+npm install
+bower install
+```
 
-## Prerequisites
+## Run the app
+### Development mode
+`npm run fb` - starts the fastboot server and watches for file changes (watch is buggy, though).
 
-You will need the following things properly installed on your computer.
+### "Production" mode
+`npm run fb-cache` - builds the production version and starts server.js with fastboot cache enabled.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Cache will work only if you have Redis server enabled and configured in server.js. It's fine to run it without redis too - the app will run but the console will show connection errors and the HTML cache won't work.
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+### URL
+Use [http://localhost:4200/articles](http://localhost:4200/articles) to open the Ember app.
